@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/*Todos los elementos*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/*Header*/
+
+header{
+    width: 100vw;
+    height: 15vh;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.81);
+}
+
+/*Header - logo*/
+.logo{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+.logo img{
+    width: 6em;
+}
+
+.logo h1{
+    font-size: clamp(1.5em, 2vw, 3em);
+}
+
+/*Header nav-bar*/
+.nav-label, #menu{
+    display: none;
+}
+
+.menu, .footer-links ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 1em;
+}
+
+.menu li a, .menu button, .footer-links ul li a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-right: 2.5em;
+    letter-spacing: 0.06em;
+    font-size: clamp(1em, 1.5vw, 1em);
+}
+
+.menu li a:after{
+    content: "";
+    position: absolute;
+    background-color: #6BD9EC;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -9px;
+    transition: 0.5s;
+}
+
+
+/*Bton*/
+form .button-register{
+    text-align: center;
+}
+
+form .button-register input{
+    width: 100%;
+    width: 10em;
+    margin: 1em auto;
+    padding: 0.5em;
+    color: black;
+    background-color: #6BD9EC;
+    border: #509fad 3px solid;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 2em;
+    
+    
+}
+
+.button-register input::placeholder{
+    color: black;
+}
+
+
+/**/
+.menu li a:hover:after, .footer-links ul li a:hover:after{
+    width: 100%;
+}
+
+
+.menu button{
+   margin-right: 1em;
+}
+
+.menu button{
+    background-color: #6BD9EC;
+    padding: 0.5em 0.7em;
+    border-radius: 2em;
+    color: black;
+    border: none;
+    font-size: clamp(1em, 1.5vw, 1em);
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu button a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu button:hover{
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    border: 3px solid #6BD9EC;
+    background-color: rgba(85, 85, 85, 0.4);
+    color: #6BD9EC;
+}
+
+.menu button a:hover{
+    color: #6BD9EC;
+}
+
+
+.menu-responsive, #check{
+    display: none;
+}
+
+footer {
+    width: 100vw;
+    height: 15vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3em;
+    color: white;
+    margin-top: 30px;
+}
+
+/*Scroll*/
+body::-webkit-scrollbar{
+    width: 15px;
+    background-color: #222222e5;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #91edfd;
+    border-radius: 10.0px;
+}
+
+.copy{
+    font-size: clamp(0.6em, 1.5vw, 1em);
+}
+
+
+/*Mensaje*/
+.text{
+
+    padding: 20px 10px;
+    font-size: 0.9em;
+    color: #000;
+    margin: 0;
+    text-align: center;
+    border-top: 40px;
+  
+}
+
+.success{
+    background-color: #91edfd;
+    width: 80%;
+    border-radius: 6px;
+    margin-top: 60px;
+    margin-left: 10%;
+
+}
+
+
+
+/*boton*/
+
+.text1{
+    float: right;
+    text-decoration: none;
+    background-color:#6BD9EC;
+    color: black;
+    border-radius: 5px;
+    margin-top: 10%;
+    margin-right: 10px;
+    height: 27px;
+    width: 120px;
+    text-align: center;
+    
+}
+
+.text1:hover{
+    background-color: rgb(83, 83, 83);
+    color: white;
+}
+
+@media (max-width:800px){
+    .header{
+        width: 110vw}
+    
+        .menu-responsive{
+            display: block;
+          }
+          ul{
+              display: grid;
+              position: fixed;
+              width: 100%;
+              height: auto; 
+              background: #2c3e50;
+              top: 15vh;
+              left: -100%;
+              text-align: center;
+              transition: all .5s;
+          }
+          nav ul li{
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+          }
+          nav ul li a{
+            font-size: 20px;
+          }
+          a:hover,a.activa{
+            background: none;
+            color: #0082e6;
+          }
+          #check:checked ~ ul{
+            left: 0;
+          }
+        
+          .menu button{
+            display: none;
+          }
+        
+          #check:checked ~ ul {
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            /* flex-wrap: nowrap; */
+            align-items: center;
+            height: auto;
+        }
+        
+        .sidenav {
+            display: contents;
+        }
+    
+        header{
+        width: 110vw;
+        }
+    
+        .main{
+            display: contents;
+        }
+
+        footer{
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    
+        footer ul li{
+            font-size: 0.8em;
+        }
+
+        .first-section .text-pasajero{
+            
+            text-align:left;
+            margin-right: 1em;
+        }}
